@@ -17,6 +17,8 @@ export default {
 <style scoped>
 img{
     width: 50px;
-
+}
+h1{
+  color:azure;
 }
 </style>
