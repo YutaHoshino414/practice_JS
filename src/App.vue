@@ -1,34 +1,18 @@
 <template>
-  <div>
-    
-    <headerpart></headerpart>
-    <div class="container">
-      <div class="jumbotron mt-5">
-        <p v-if="msg.length > 0">
-          {{msg}}
-        </p>
-        <p v-else>
-          no text 
-        </p>
-        <form class="form-inline">
-          <input type="text" v-model="msg" class="form-control w-50">
-          <button @click="clear()" class="btn btn-primary">clear</button>
-        </form>
-      </div>
-      <div class="mt-5" v-for="add,index in address" :key='index'>
-      <p>都道府県：{{ add.address1 }}</p>
-      <p>市区町村：{{ add.address2 }}</p>
-      <p>区域：{{ add.address3 }}</p>
-      </div><br>
-    <Movie></Movie>
-    </div>
-    
+  <Headerpart></Headerpart>
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> |
+    <router-link to="/page1">Page1</router-link> |
+    <router-link to="/page2">Page2</router-link> 
   </div>
+  <transition name="fade" mode="out-in">
+    <router-view/>
+  </transition>
 </template>
 
 <script>
-import headerpart from './components/headerpart'
-import Movie from './components/Movie'
+import Headerpart from './components/headerpart.vue'
 
 export default {
   data () {
@@ -43,7 +27,43 @@ export default {
     }
   },
   components:{
-    headerpart, Movie
+    Headerpart
   },
 }
 </script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+  font-size: 24px;   /* <--追加：active要素のみ効果 */
+}
+
+/* 以下追加：トランジション(fade-in/out) */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+</style>
