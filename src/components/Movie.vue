@@ -21,7 +21,8 @@
     },
   
       created () {
-        fetch("https://www.omdbapi.com/?s=man&apikey=4a3b711b")
+        let url = process.env.VUE_APP_URL
+        fetch(url)
         .then( response => {
           return response.json();
         })
