@@ -1,4 +1,4 @@
-# first_project
+# first_project(Vue:3.x)
 
 ## Project setup
 ```
