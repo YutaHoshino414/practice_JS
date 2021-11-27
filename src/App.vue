@@ -1,6 +1,6 @@
 <template>
-  <Headerpart></Headerpart>
-  <div id="nav">
+  <headerpart />
+  <div id="nav" >
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/page1">Page1</router-link> |
@@ -9,6 +9,9 @@
   <transition name="fade" mode="out-in">
     <router-view/>
   </transition>
+    <footer class="navbar nabvar-dark bg-dark fixed-bottom">
+    <img alt="Vue logo" src="./assets/logo.png">
+  </footer>
 </template>
 
 <script>
@@ -19,6 +22,7 @@ export default {
     return {
       msg: 'Hello World!',
       address:[],
+      
     }
   },
   methods: {
@@ -34,7 +38,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -42,12 +46,20 @@ export default {
 }
 
 #nav {
-  padding: 30px;
+  padding: 20px;
+}
+
+#nav img{
+    width: 60px;
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  text-decoration: none;
+}
+
+footer img{
+    width: 50px;
 }
 
 #nav a.router-link-exact-active {
