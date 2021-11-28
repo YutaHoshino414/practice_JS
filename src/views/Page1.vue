@@ -1,7 +1,8 @@
 <template>
 <div class="Page1">
   <h1>This is a page1</h1>
-  <div class="jumbotron container bg-success">
+  <div class="card container bg-success p-4">
+    <div class="jumbotron m-4"></div>
     <div class="row">
       <div class="card col-sm-4 mb-3 mx-4" style="width: 380px;" v-for="item,i in items" :key='i'>
         <div class="row no-gutters">

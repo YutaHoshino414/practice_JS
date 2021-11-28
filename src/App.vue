@@ -8,7 +8,7 @@
   </div>
   <transition name="fade" mode="out-in">
     <router-view/>
-  </transition>
+  </transition><br><br><br>
     <footer class="navbar nabvar-dark bg-dark fixed-bottom">
     <img alt="Vue logo" src="./assets/logo.png">
   </footer>

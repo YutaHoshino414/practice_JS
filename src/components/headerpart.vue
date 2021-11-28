@@ -1,5 +1,4 @@
 <template>
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> <h1>header</h1>
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,29 +8,29 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Home
-            <span class="visually-hidden">(current)</span>
-          </a>
+            <router-link to="/" class="nav-link">home</router-link>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#">Features</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
-        </li>
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <router-link to="/about" class="nav-link">About</router-link>
         </li>
-        <li class="nav-item dropdown">
+        <ul class="nav-item dropdown menu">
+          <li>
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu">
+          <ul class="dropdown-menu">
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </li>
+            
+          </ul></li>
+        </ul>
       </ul>
       <form class="d-flex">
         <input class="form-control me-sm-2" type="text" placeholder="Search">
@@ -50,6 +49,7 @@ export default {
 }
 
 </script>
+
 <style scoped>
 img{
     width: 50px;
@@ -57,4 +57,28 @@ img{
 h1{
   color:azure;
 }
+.menu {
+	list-style-type:none;
+}
+.menu > li {
+	display:inline-block;
+	position:relative;
+}
+.menu > li > ul {
+	display:none;
+}
+.menu > li:hover ul {
+	display:block;
+	position:absolute;
+	padding:0;
+	margin:0;
+	top:2.0em;
+	left:0;
+	list-style-type:none;
+}
+.nav-item  a.router-link-exact-active {
+  color: #42b983;
+    /* <--追加：active要素のみ効果 */
+}
+
 </style>
