@@ -18,3 +18,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+img {
+  animation: rotate-anime 4s linear infinite;
+}
+@keyframes rotate-anime {
+  0%  {transform: rotateY(0);}
+  100%  {transform: rotateY(360deg);}
+}
+
+</style>

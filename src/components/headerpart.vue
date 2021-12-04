@@ -26,6 +26,10 @@
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something else here</a>
+            <router-link to="/page1" class="dropdown-item">Page1</router-link>
+            <router-link to="/page2" class="dropdown-item">Page2</router-link>
+            <router-link to="/page3" class="dropdown-item">Page3</router-link>
+            <router-link to="/page4" class="dropdown-item">Page4</router-link>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Separated link</a>
             
@@ -77,7 +81,7 @@ h1{
 	list-style-type:none;
 }
 .nav-item  a.router-link-exact-active {
-  color: #42b983;
+  /* color: #42b983; */
     /* <--追加：active要素のみ効果 */
 }
 
