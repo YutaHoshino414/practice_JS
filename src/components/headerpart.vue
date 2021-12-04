@@ -10,12 +10,6 @@
         <li class="nav-item">
             <router-link to="/" class="nav-link">home</router-link>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li> -->
         <li class="nav-item">
           <router-link to="/about" class="nav-link">About</router-link>
         </li>
@@ -23,9 +17,6 @@
           <li>
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
           <ul class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
             <router-link to="/page1" class="dropdown-item">Page1</router-link>
             <router-link to="/page2" class="dropdown-item">Page2</router-link>
             <router-link to="/page3" class="dropdown-item">Page3</router-link>
